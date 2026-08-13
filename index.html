@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Campus SnackPass — Order food from your college canteen quickly and easily.">
+    <title>Campus SnackPass — College Canteen Ordering</title>
+
+    <!-- Google Font: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ========== Header ========== -->
+    <header class="header" id="header">
+        <div class="header-left">
+            <span class="logo-icon">🍔</span>
+            <h1 class="logo-text">Campus SnackPass</h1>
+        </div>
+        <!-- Cart toggle button (visible on mobile only) -->
+        <button class="cart-toggle" id="cartToggle" aria-label="Toggle order summary">
+            🛒 <span id="cartCount">0</span>
+        </button>
+    </header>
+
+    <!-- ========== Main Content ========== -->
+    <main class="main-content" id="mainContent">
+
+        <!-- Menu Section -->
+        <section class="menu-section" id="menuSection">
+            <h2 class="section-title">What's on the menu?</h2>
+
+            <!-- Category Filter Buttons -->
+            <div class="category-filters" id="categoryFilters">
+                <button class="category-btn active" data-category="All">All</button>
+                <button class="category-btn" data-category="Snacks">Snacks</button>
+                <button class="category-btn" data-category="Meals">Meals</button>
+                <button class="category-btn" data-category="Drinks">Drinks</button>
+            </div>
+
+            <!-- Food Cards Grid (rendered by JS) -->
+            <div class="food-grid" id="foodGrid"></div>
+        </section>
+
+        <!-- Order Summary Sidebar -->
+        <aside class="order-summary" id="orderSummary">
+            <h2 class="section-title">Your Order</h2>
+            <div class="order-items" id="orderItems">
+                <!-- Order items rendered by JS -->
+            </div>
+            <div class="order-footer" id="orderFooter">
+                <!-- Total + confirm button rendered by JS -->
+            </div>
+        </aside>
+
+    </main>
+
+    <!-- ========== Confirmation Modal ========== -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal" id="confirmationModal">
+            <div class="modal-content" id="modalContent">
+                <!-- Confirmation content rendered by JS -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
